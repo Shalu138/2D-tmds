@@ -936,6 +936,7 @@ section,
 }
 
 .hero2::before {
+  display: none;
   content: "";
   position: absolute;
   width: 100%;
@@ -1004,10 +1005,36 @@ section,
 --------------------------------------------------------------*/
 
 .about-event {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 .about-container p {
   text-align: justify;
+}
+.about-event .section-title.text-left h2 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.about-event .section-title.text-left {
+  margin-bottom: 20px;
+  padding: 0 0 20px 0;
+  position: relative;
+}
+
+.about-event .section-title.text-left h2:after {
+  display: none;
+}
+
+.about-event .section-title.text-left:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* margin: auto; */
 }
 
 @media (max-width: 575.98px) {
@@ -1182,7 +1209,6 @@ section,
   object-position: right;
 }
 
-
 .participation-policy .section-title {
   text-align: left;
 }
@@ -1218,8 +1244,8 @@ section,
 
 .participation-policy ul li {
   margin-bottom: 15px;
+  display: flex;
 }
-
 
 /* venue accessibility */
 .venue-accessibility .col-md-5:first-child .participation-policy {
@@ -1331,7 +1357,7 @@ section,
 # Register& Contact Section Section
 --------------------------------------------------------------*/
 .register-and-contact {
-  padding: 80px 0;
+  padding: 50px 0;
   position: relative;
 }
 .register-and-contact::before {
@@ -1348,16 +1374,19 @@ section,
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   position: relative;
 
-  padding: 25px 0 0;
+  padding: 25px 0;
 }
 
 .register-and-contact .separator {
   position: absolute;
   width: 1px;
   border: 1px dashed #ccc;
-  height: calc(100% - 130px);
-  left: 46%;
-  top: 39%;
+  /* height: calc(100% - 180px);
+    left: 50%;
+    top: 35%; */
+  height: 88px;
+  left: 50%;
+  top: 96px;
 }
 .register-and-contact .separator span {
   display: inline-block;
@@ -1374,13 +1403,25 @@ section,
   padding: 25px 0px 25px 35px;
 }
 .register-div .section-title {
-  padding-bottom: 25px;
+  /* padding-bottom: 25px; */
+  position: relative;
+}
+.register-and-contact .section-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 .register-and-contact .section-title p {
   text-align: left;
   color: #575757;
 }
-.register-and-contact .register-btn {
+.register-btn {
   background: var(--accent-color);
   color: var(--contrast-color);
   border-color: var(--contrast-color);
@@ -1388,12 +1429,12 @@ section,
   padding: 10px 30px;
   border-radius: 5px;
 }
-.register-and-contact .register-btn:hover {
+.register-btn:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, black 15%);
   color: var(--contrast-color);
 }
 .register-and-contact .email-phone {
-  padding: 25px 50px 25px 15px;
+  padding: 15px 50px 25px 15px;
   color: #575757;
 }
 .register-and-contact .email-phone h3 {
@@ -1432,7 +1473,7 @@ section,
 }
 .register-and-contact .email-phone-div {
   box-shadow: 0px 0px 5px 0px #ccc;
-  margin-top: 22px;
+  margin-top: 10px;
 }
 .register-and-contact .item {
   padding: 10px 20px;
@@ -1499,7 +1540,7 @@ section,
   }
   .register-and-contact .separator {
     /* top: 56%; */
-    top: 70%;
+    top: 42%;
   }
   .register-and-contact .email-phone {
     padding: 25px 20px 25px 20px;
