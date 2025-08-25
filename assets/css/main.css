@@ -86,6 +86,13 @@ h6 {
   max-width: 1350px;
 }
 
+@media (max-width: 767.98px) {
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 /* Pulsating Play Button
 ------------------------------*/
 .pulsating-play-btn {
@@ -187,14 +194,17 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 80px;
+  max-height: 95px;
   margin-right: 8px;
 }
 
 .header .logo .logo-text {
   font-weight: 800;
   color: #5c5c5c;
-  font-size: 18px;
+  font-size: 25px;
+  width: max-content;
+  display: block;
+  margin-top: 7px;
 }
 
 .header .logo h1 {
@@ -206,7 +216,7 @@ h6 {
 
 .header .conference-logo {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 .header .date {
   color: #000;
@@ -232,12 +242,28 @@ h6 {
   }
 }
 
+@media (max-width: 767.98px) {
+  .header .logo .logo-text {
+    font-size: 18px;
+    display: block;
+    width: auto;
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 575.99px) {
   body {
     font-size: 15px;
   }
   .header .logo img {
-    max-height: 40px;
+    max-height: 50px;
+    margin-right: 5px;
+  }
+  .header .conference-logo {
+    align-items: center;
+  }
+  .header .date {
+    font-size: 11px;
   }
 }
 
@@ -258,6 +284,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    margin-left: -111px;
   }
 
   .navmenu ul {
@@ -274,7 +301,7 @@ h6 {
 
   .navmenu > ul > li {
     white-space: nowrap;
-    padding: 15px 14px;
+    padding: 15px 18px;
   }
 
   .navmenu > ul > li:last-child {
@@ -392,7 +419,7 @@ h6 {
     color: var(--nav-color);
     font-size: 28px;
     line-height: 0;
-    margin-right: 10px;
+    margin-right: 0px;
     cursor: pointer;
     transition: color 0.3s;
   }
@@ -830,7 +857,7 @@ section,
 @media (max-width: 575.98px) {
   section,
   .section {
-    padding: 50px 0;
+    padding: 35px 0;
   }
 }
 
@@ -839,7 +866,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
   position: relative;
 }
 
@@ -976,7 +1003,7 @@ section,
 
 @media (max-width: 767.98px) {
   .hero2 {
-    margin-top: 78px;
+    margin-top: 68px;
   }
   .hero2 .btn {
     font-size: 14px;
@@ -992,7 +1019,9 @@ section,
 @media (max-width: 575.98px) {
   .hero2 img {
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
+    height: auto;
+    min-height: 150px;
     object-fit: cover;
   }
   .banner-overlay .main-title {
@@ -1110,20 +1139,20 @@ section,
 }
 
 .speaker-details {
-  box-shadow: 0px 0px 5px #ccc;
-  padding: 0 10px 10px;
+  /* box-shadow: 0px 0px 5px #ccc; */
+  /* padding: 0 10px 10px; */
   height: 100%;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fff;
-  border-left: 3.5px solid var(--accent-color);
-  border-bottom: 3.5px solid green;
-  transition: 0.5s ease-in-out;
+  /* background: #fff; */
+  /* border-left: 3.5px solid var(--accent-color);
+  border-bottom: 3.5px solid green; */
+  /* transition: 0.5s ease-in-out; */
 }
 .speaker-details:hover {
-  transform: translate(5px, -5px);
+  /* transform: translate(5px, -5px); */
 }
 
 @media (max-width: 767.98px) {
@@ -1169,6 +1198,12 @@ section,
 .venue .venue-image {
   height: 265px;
   overflow: hidden;
+}
+
+.venue .utown-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .venue .venue-info-box {
@@ -1316,6 +1351,7 @@ section,
 
 .sponsor-row {
   display: flex;
+  justify-content: center;
 }
 
 .sponsors .client-logo {
